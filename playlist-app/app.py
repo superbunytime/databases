@@ -1,7 +1,7 @@
 from flask import Flask, redirect, render_template
 from flask_debugtoolbar import DebugToolbarExtension
 
-from models import db, connect_db, Playlist, Song, PlaylistSong
+from .models import db, connect_db, Playlist, Song, PlaylistSong
 from forms import NewSongForPlaylistForm, SongForm, PlaylistForm
 
 app = Flask(__name__)
@@ -115,5 +115,5 @@ def add_song_to_playlist(playlist_id):
                              playlist=playlist,
                              form=form)
 
-if _name_ == '__main__':
-    app.run()
+# if _name_ == '__main__':
+#     app.run()
