@@ -114,3 +114,6 @@ def add_song_to_playlist(playlist_id):
     return render_template("add_song_to_playlist.html",
                              playlist=playlist,
                              form=form)
+
+if _name_ == '__main__':
+    app.run()
